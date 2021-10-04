@@ -1,0 +1,67 @@
+/* 
+##################################################################
+Creates variables so colours can be called throughout the css file
+##################################################################
+*/
+
+/* :root {
+
+  } */
+  
+
+/*
+###########
+Base styles
+###########
+*/
+
+html, body {
+    width: 100%;
+  }
+
+body {
+font-size: 14px;
+font-family: arial,sans-serif;
+color: #222;
+}
+
+
+/* 
+################
+Main Page styles
+################
+*/
+
+header, main {
+    display: flex;
+    justify-content: center;
+}
+
+header {
+    padding: 20px;
+    background-color: #f2e8cf;
+}
+
+.logo {
+    width: 150px;
+}
+
+.recipes{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    width: 100%;
+}
+
+.recipes img {
+    justify-self: center;
+    max-width: 100%;
+}
+
+/* .recipes a {
+    max-width: 100%;
+}
+
+.recipes img{
+    max-width: 100%;
+} */
