@@ -4,9 +4,10 @@ Creates variables so colours can be called throughout the css file
 ##################################################################
 */
 
-/* :root {
-
-  } */
+:root {
+    --bg-colour: #f2e8cf;
+    --border-colour: rgb(100, 100, 100);
+  }
   
 
 /*
@@ -32,36 +33,51 @@ Main Page styles
 ################
 */
 
-header, main {
+header {
     display: flex;
     justify-content: center;
-}
-
-header {
-    padding: 20px;
-    background-color: #f2e8cf;
+    padding: 10px;
+    background-color: var(--bg-colour);
 }
 
 .logo {
-    width: 150px;
+    width: 130px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+.seperator {
+    height: 3.5px;
+    background-color: var(--bg-colour);
+    border: 1px solid var(--border-colour);
 }
 
 .recipes{
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: 1fr;
-    width: 100%;
-}
-
-.recipes img {
-    justify-self: center;
+    display: flex;
     max-width: 100%;
 }
 
-/* .recipes a {
-    max-width: 100%;
+.recipes a {
+    width: 33.4%;
+    max-height: 600px;
+    overflow: hidden;
 }
 
 .recipes img{
-    max-width: 100%;
-} */
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.recipes img:hover{
+    -webkit-transform: scale(1.02); /* Safari and Chrome */
+    -moz-transform: scale(1.02); /* Firefox */
+    -ms-transform: scale(1.02); /* IE 9 */
+    -o-transform: scale(1.02); /* Opera */
+    transform: scale(1.02);
+}
