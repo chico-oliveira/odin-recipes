@@ -5,8 +5,9 @@ Creates variables so colours can be called throughout the css file
 */
 
 :root {
-    --bg-colour: #f2e8cf;
-    --border-colour: rgb(100, 100, 100);
+    --bg-colour: #f6f6f6;
+    --h-color: #43493a;
+    --logo-text: #8cc63e;
   }
   
 
@@ -24,24 +25,24 @@ body {
 font-size: 14px;
 font-family: arial,sans-serif;
 color: #222;
+background-color: var(--bg-colour);
 }
 
 
 /* 
 ################
-Main Page styles
+Main styles
 ################
 */
 
 header {
     display: flex;
     justify-content: center;
-    padding: 10px;
-    background-color: var(--bg-colour);
+    padding: 20px;
 }
 
 .logo {
-    width: 130px;
+    width: 500px;
 }
 
 .content {
@@ -49,35 +50,57 @@ header {
     flex-direction: column;
 }
 
-.seperator {
-    height: 3.5px;
-    background-color: var(--bg-colour);
-    border: 1px solid var(--border-colour);
-}
+/* 
+###############
+Main Index Page
+###############
+*/
 
-.recipes{
+.recipes {
     display: flex;
-    max-width: 100%;
 }
 
-.recipes a {
+.item{
+    display: flex;
+    flex-direction: column;
     width: 33.4%;
+}
+
+.item a {
     max-height: 600px;
     overflow: hidden;
 }
 
-.recipes img{
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -ms-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
+.item img{
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
 }
 
-.recipes img:hover{
-    -webkit-transform: scale(1.02); /* Safari and Chrome */
-    -moz-transform: scale(1.02); /* Firefox */
-    -ms-transform: scale(1.02); /* IE 9 */
-    -o-transform: scale(1.02); /* Opera */
-    transform: scale(1.02);
+.item img:hover{
+    -webkit-transform: scale(1.005); /* Safari and Chrome */
+    -moz-transform: scale(1.005); /* Firefox */
+    -ms-transform: scale(1.005); /* IE 9 */
+    -o-transform: scale(1.005); /* Opera */
+    transform: scale(1.005);
+}
+
+.item h2{
+    padding: 20px;
+    text-align: center;
+    color: var(--h-color);
+    font-family: "Playfair Display", serif;
+    font-size: 40px;
+}
+
+/*
+############
+Recipe Pages
+############
+*/
+
+.recipe{
+    width: 650px;
 }
