@@ -10,6 +10,7 @@ Creates variables so colours can be called throughout the css file
     --highlight-colour: #d1dac2;
     --h-color: #43493a;
     --border-color: #204B57;
+    --footer-color: #125E8A;
   }
   
 
@@ -120,12 +121,31 @@ footer{
     justify-content: center;
 }
 
-footer p{
+.footer-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 10px 8px;
-    width: 700px;
+    width: 300px;
     border-top-width: 1px;
     border-top-color: var(--border-color);
-    text-align: center;
+}
+
+.footer-items a{
+    display: flex;
+    align-items: center;
+}
+
+footer img {
+    width: 28px;
+    padding-right: 6px;
+}
+
+footer span{
+    color: var(--footer-color);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
 }
 
 /*
