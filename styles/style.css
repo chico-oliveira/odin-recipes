@@ -6,8 +6,10 @@ Creates variables so colours can be called throughout the css file
 
 :root {
     --bg-colour: #f6f6f6;
-    --h-color: #43493a;
     --logo-text: #8cc63e;
+    --highlight-colour: #d1dac2;
+    --h-color: #43493a;
+    --border-color: #204B57;
   }
   
 
@@ -22,10 +24,11 @@ html, body {
   }
 
 body {
-font-size: 14px;
-font-family: arial,sans-serif;
-color: #222;
-background-color: var(--bg-colour);
+    height: 100vh; 
+    font-size: 14px;
+    font-family: arial,sans-serif;
+    color: #222;
+    background-color: var(--bg-colour);
 }
 
 
@@ -35,19 +38,33 @@ Main styles
 ################
 */
 
-header {
+.content {
+    min-height: 100%;
     display: flex;
+    flex-direction: column;
+}
+
+.flexing {
+    display: flex;
+    flex-shrink: 0;
+}
+
+.sticky-footer {
+    flex: auto;
+}
+
+header, footer {
+    display: flex;
+    flex-shrink: 0;
+}
+
+header {
     justify-content: center;
-    padding: 20px;
+    padding: 18px;
 }
 
 .logo {
     width: 500px;
-}
-
-.content {
-    display: flex;
-    flex-direction: column;
 }
 
 /* 
@@ -56,35 +73,38 @@ Main Index Page
 ###############
 */
 
+main {
+    align-items: center;
+}
+
 .recipes {
+    width: 100%;
+    margin: 0px 10px 20px 10px;
     display: flex;
+    gap: 10px;
 }
 
 .item{
     display: flex;
     flex-direction: column;
-    width: 33.4%;
+    flex-basis: 100%;
+    transition: all 0.15s ease;
 }
 
-.item a {
-    max-height: 600px;
-    overflow: hidden;
+.item a{
+    height: 100%;
 }
-
 .item img{
-    -webkit-transition: all 0.4s ease;
-    -moz-transition: all 0.4s ease;
-    -ms-transition: all 0.4s ease;
-    -o-transition: all 0.4s ease;
-    transition: all 0.4s ease;
+    border-radius: 0.5%;
+    min-height: 550px;
+    max-height: 650px;
+    width: 100%;
+    object-fit: cover;
 }
 
-.item img:hover{
-    -webkit-transform: scale(1.005); /* Safari and Chrome */
-    -moz-transform: scale(1.005); /* Firefox */
-    -ms-transform: scale(1.005); /* IE 9 */
-    -o-transform: scale(1.005); /* Opera */
-    transform: scale(1.005);
+.item:hover{
+    border-radius: 5%;
+    background-color: var(--highlight-colour);
 }
 
 .item h2{
@@ -92,7 +112,20 @@ Main Index Page
     text-align: center;
     color: var(--h-color);
     font-family: "Playfair Display", serif;
+    font-weight: bold;
     font-size: 40px;
+}
+
+footer{
+    justify-content: center;
+}
+
+footer p{
+    padding: 10px 8px;
+    width: 700px;
+    border-top-width: 1px;
+    border-top-color: var(--border-color);
+    text-align: center;
 }
 
 /*

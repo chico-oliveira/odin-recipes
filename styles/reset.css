@@ -47,6 +47,41 @@ main {
   display: block;
 }
 
+/* Vertical rhythm */
+/* ============================================ */
+
+p {
+  margin: 0;
+}
+
+/* Headings */
+/* ============================================ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: inherit;
+  margin: 0;
+}
+
+/* Text-level semantics */
+/* ============================================ */
+
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+
+ a {
+  background-color: transparent;
+  text-decoration: none;
+  color: inherit;
+}
+
 /* Forms */
 /* ============================================ */
 
