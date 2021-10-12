@@ -45,12 +45,8 @@ Main styles
     flex-direction: column;
 }
 
-.flexing {
-    display: flex;
-    flex-shrink: 0;
-}
-
 .sticky-footer {
+    display: flex;
     flex: auto;
 }
 
@@ -65,7 +61,8 @@ header {
 }
 
 .logo {
-    width: 500px;
+    min-width: 500px;
+    width: 25vw;
 }
 
 /* 
@@ -82,6 +79,7 @@ main {
     width: 100%;
     margin: 0px 10px 20px 10px;
     display: flex;
+    flex: auto;
     gap: 10px;
 }
 
@@ -97,8 +95,8 @@ main {
 }
 .item img{
     border-radius: 0.5%;
-    min-height: 550px;
-    max-height: 650px;
+    min-height: 60vh;
+    max-height: 70vh;
     width: 100%;
     object-fit: cover;
 }
