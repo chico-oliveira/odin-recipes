@@ -178,6 +178,7 @@ footer span{
 
   .recipes {
     margin: 10px 10px 10px 10px;
+    padding: 0 10px;
     display: flex;
     flex-direction: column;
     flex: auto;
@@ -217,10 +218,12 @@ Recipe Pages
     padding: 20px 10px;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .recipe{
     width: 300px;
+    height: 100%;
     margin-right: 30px;
 }
 
@@ -267,7 +270,7 @@ Recipe Pages
     flex-direction: column;
     padding: 10px 30px;
     width: 270px;
-    max-height: 420px;
+    height: 100%;
     border-radius: 2%;
     background-color: var(--ingredients-color);
 }
