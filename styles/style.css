@@ -297,7 +297,7 @@ Recipe Pages
 @media (max-width: 1000px) {
 
   .heading{
-      padding: 0px 20px;
+      padding: 0px 10px;
       flex-direction: column-reverse;
       align-items: center;
   }
@@ -305,10 +305,12 @@ Recipe Pages
   .title h1{
       padding: 0 0 10px 0;
       justify-content: center;
+      font-size: clamp(2.5rem, 8vw, 4.5rem);
   }
 
   .description, .credit{
       width: 75vw;
+      font-size: clamp(1.2rem, 3vw, 1.85rem);
   }
 
   .credit{
@@ -323,4 +325,17 @@ Recipe Pages
       max-height: 300px;
       object-fit: cover;
   }
+
+  .text{
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .ingredients{
+      min-width: 42vw;
+  }
+
+  .steps{
+      width: 85vw;
+  }  
 }
