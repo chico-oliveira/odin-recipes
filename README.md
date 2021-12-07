@@ -1,4 +1,4 @@
 # Odin Recipes
-Basic Recipe website using only HTML and CSS.
+A Recipe website with a few of my favourite recipes.
 
 Check out [here](https://chico-oliveira.github.io/odin-recipes/index.html)!
